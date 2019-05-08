@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 # Use sqlite3 as the database for Active Record
@@ -21,20 +20,21 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
+gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Pry for testing
 gem 'pry'
 # Use Faraday for GET and POST
 gem 'faraday'
 # Dot-env
 gem 'dotenv-rails'
+gem 'rack_session_access'
 
-#Testing
+# Testing
 group :test do
-  gem 'rspec-rails'
   gem 'capybara'
   gem 'rack_session_access'
+  gem 'rspec-rails'
   gem 'webmock'
 end
 
@@ -55,5 +55,6 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'rack_session_access'
   gem 'spring'
 end
