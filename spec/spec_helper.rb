@@ -3,8 +3,8 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 
 require 'capybara/dsl'
-require 'capybara/rails'
 require 'capybara/rspec'
+require 'capybara/rails'
 require 'webmock/rspec'
 require 'rack_session_access/capybara'
 
@@ -32,4 +32,4 @@ RSpec.configure do |config|
   end
 end
 
-WebMock.disable_net_connect!(allow_localhost: true)
+WebMock.allow_net_connect!(allow_localhost: true)
